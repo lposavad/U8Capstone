@@ -1,0 +1,58 @@
+/*  Universal Styles  */
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/*  Header Styles  */
+
+.header {
+  position: flex;
+  top: 0;
+  height: 64px;
+  background-color: white;
+  z-index: 20;
+}
+
+.header .desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.header .mobile {
+  display: none;
+  align-items: center;
+}
+
+.desktop .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.desktop ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul a {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.mobile ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 450px) {
+  .header .desktop {
+    display: none;
+  }
+
+  .header .mobile {
+    display: block;
+  }
+}
