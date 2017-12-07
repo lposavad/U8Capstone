@@ -4,9 +4,103 @@ html {
   font-size: 16px;
 }
 
-/*  Header Styles  */
+h1, h2, h3 {
+  font-weight: bold;
+}
 
-.header {
+h1  {
+  font-size: 4rem;
+}
+
+h2  {
+  font-size: 2.5rem;
+}
+
+h3  {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 2rem;
+}
+.container {
+  display: flex;
+  width: auto;
+}
+
+.container .leftcol {
+  width: 60%;
+  object-fit: contain;
+}
+
+.container .rightcol {
+  width: 40%;
+  justify-content: left;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  max-width: 33%;
+}
+
+.leftcol {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+}
+
+.rightcol {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+}
+
+.rightcol .leftside {
+  width: 35%;
+  margin: 16px;
+}
+
+.rightcol .leftside img {
+  width: 100%;
+  overflow: auto;
+}
+
+.rightcol .rightside {
+  width: 65%;
+  margin: auto;
+  padding-right: 16px;
+  display: block;
+}
+
+.element {
+  display: flex;
+  height: auto;
+  object-fit: scale-down;
+}
+
+.element .leftside {
+  display: block;
+  width: 35%;
+}
+
+.element .rightside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 65%;
+}
+
+.a_class {
+  display: block;
+  height: 420px;
+  background-color: white;
+  margin: 16px;
+}
+
+/*  Header Styles  */
+header {
   position: flex;
   top: 0;
   height: 64px;
@@ -14,14 +108,14 @@ html {
   z-index: 20;
 }
 
-.header .desktop {
+header .desktop {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px;
 }
 
-.header .mobile {
+header .mobile {
   display: none;
   align-items: center;*/
 }
@@ -50,11 +144,140 @@ ul a {
 }
 
 @media only screen and (max-width: 450px) {
-  .header .desktop {
+  header .desktop {
     display: none;
   }
 
-  .header .mobile {
+  header .mobile {
     display: block;
   }
+}
+/*  Banner Styles  */
+.banner {
+  background-color: #EAEDED;
+}
+
+.banner h1 {
+  padding-top: 20%;
+}
+
+.banner p {
+  padding-top: 10%;
+}
+
+.banner .rightcol span {
+  width: 40%;
+  background-color: black;
+  color: white;
+  margin: auto;
+  margin-top: 10%;
+  padding: 8px 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  News styles */
+.news {
+  background-color: #FCF3CF;
+}
+
+.news p {
+  padding-top: 1rem;
+}
+
+.news .leftcol h2 {
+  padding-top: 32px;
+}
+
+.news .element:last-child {
+  background-color: #EAEDED;
+}
+
+.rightside a {
+  padding-top: 20px;
+  color: blue;
+}
+
+#quoted {
+  font-size: 0.75rem;
+}
+/*  Classes Styles  */
+.classes {
+  display: block;
+  background-color: #EAEDED;
+  padding: 32px 24px;
+}
+
+.classes h2 {
+  display: flex;
+  margin: 0 auto 16px auto;
+  justify-content: center;
+}
+
+.classbucket {
+  display: flex;
+  flex-direction: row;
+  margin: 0 40px;
+}
+
+.a_class img {
+  width: 100%;
+  overflow: auto;
+}
+
+.a_class h3 {
+  padding: 16px;
+}
+
+.a_class p {
+  padding: 8px 16px;
+  /*line-height: 2rem;*/
+}
+
+/*  Thesis Styles  */
+.thesis {
+  display: block;
+  background-color: #FCF3CF;
+  padding: 32px 24px;
+}
+
+.thesis h2 { /* controls the thesis title */
+  display: flex;
+  justify-content: center;
+}
+
+.thesis .element:first-child {
+  margin-top: 16px;
+  background-color: #EAEDED;
+}
+
+.thesis .leftcol video {
+  height: 510px;
+  margin: 0;
+  padding: 0;
+  object-fit: fill;
+}
+
+.thesis .leftcol h3 {
+  margin: 24px auto 8px 0;
+}
+
+.thesis .leftcol p {
+  /*align-content: flex-start;*/
+  border: 1px solid black;
+}
+
+/*  Footer Styles  */
+footer {
+  display: flex;
+  padding: 24px 16px;
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+  background-color: #FCF3CF;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
 }
