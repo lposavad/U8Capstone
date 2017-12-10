@@ -1,6 +1,6 @@
 /*  Universal Styles  */
 html {
-  font-family: Helvetica, sans-serif;
+  font-family: Verdana, Helvetica, sans-serif;
   font-size: 16px;
 }
 
@@ -9,7 +9,7 @@ h1, h2, h3 {
 }
 
 h1  {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h2  {
@@ -21,7 +21,13 @@ h3  {
 }
 
 p {
-  line-height: 2rem;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+img {
+  width: 100%;
+  overflow: auto;
 }
 .container {
   display: flex;
@@ -126,6 +132,9 @@ header .mobile {
   font-size: 1.25rem;
 }
 
+.logo img {
+  width: 32px;
+}
 .desktop ul {
   display: flex;
   justify-content: flex-end;
@@ -159,21 +168,30 @@ ul a {
 
 .banner h1 {
   padding-top: 20%;
+  line-height: 1.2;
 }
 
 .banner p {
   padding-top: 10%;
+  font-size: 1.75rem;
+  font-weight: 550;
+  line-height: 1.2;
 }
 
-.banner .rightcol span {
-  width: 40%;
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  border: 1px solid red;
+  margin-top: 16px;
+}
+.intro span {
   background-color: black;
   color: white;
-  margin: auto;
-  margin-top: 10%;
-  padding: 8px 40px;
+  margin-top: 24px;
+  padding: 8px 60px 8px auto;
   justify-content: center;
-  align-items: center;
+  align-self: center;
 }
 
 /*  News styles */
@@ -200,6 +218,7 @@ ul a {
 
 #quoted {
   font-size: 0.75rem;
+  line-height: 1rem;
 }
 /*  Classes Styles  */
 .classes {
@@ -218,11 +237,6 @@ ul a {
   display: flex;
   flex-direction: row;
   margin: 0 40px;
-}
-
-.a_class img {
-  width: 100%;
-  overflow: auto;
 }
 
 .a_class h3 {
@@ -260,11 +274,6 @@ ul a {
 
 .thesis .leftcol h3 {
   margin: 24px auto 8px 0;
-}
-
-.thesis .leftcol p {
-  /*align-content: flex-start;*/
-  border: 1px solid black;
 }
 
 /*  Footer Styles  */
