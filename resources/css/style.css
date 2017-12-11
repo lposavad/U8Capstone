@@ -1,6 +1,6 @@
 /*  Universal Styles  */
 html {
-  font-family: Verdana, Helvetica, sans-serif;
+  font-family: Verdana, sans-serif;
   font-size: 16px;
 }
 
@@ -105,6 +105,61 @@ img {
   margin: 16px;
 }
 
+@media only screen and (max-width: 450px) {
+  h1  {
+    font-size: 2.5rem;
+  }
+  h2  {
+    font-size: 2rem;
+  }
+  h3  {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .container {
+    display: block;
+  }
+  .container .leftcol {
+    width: 100%;
+    /*object-fit: contain;*/
+    margin: 0;
+    padding: 0;
+  }
+  .container .rightcol {
+    display: block;
+    width: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .leftcol {
+    margin: 0;
+  }
+  .rightcol {
+    padding-top: 0;
+  }
+  .element {
+    width: auto;
+    display: block;
+  }
+  .element .leftside {
+    width: auto;
+  }
+  .element .rightside {
+    width: auto;
+    padding: 16px 32px;
+  }
+  .element .rightside p {
+    font-style: normal;
+    font-size: 1rem;
+  }
+  .element .rightside a {
+    padding: 16px 0;
+    margin-bottom: 48px;
+  }
+}
+
 /*  Header Styles  */
 header {
   position: flex;
@@ -166,12 +221,12 @@ ul a {
   background-color: #EAEDED;
 }
 
-.banner h1 {
+.rightcol h1 {
   padding-top: 20%;
   line-height: 1.2;
 }
 
-.banner p {
+.rightcol p {
   padding-top: 10%;
   font-size: 1.75rem;
   font-weight: 550;
@@ -182,21 +237,45 @@ ul a {
   display: flex;
   flex-direction: column;
   width: 75%;
-  border: 1px solid red;
   margin-top: 16px;
 }
-.intro span {
+
+button {
   background-color: black;
   color: white;
   margin-top: 24px;
-  padding: 8px 60px 8px auto;
-  justify-content: center;
-  align-self: center;
+  font-size: 1.5rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
+@media only screen and (max-width: 450px) {
+  .rightcol h1 {
+    margin: 32px 0px;
+    padding: 0;
+  }
+  .rightcol p {
+    padding-top: 0;
+  }
+  .intro {
+    width: 100%;
+    margin-top: 0;
+  }
+  .intro p {
+    font-size: 1.2rem;
+  }
+  button {
+    background-color: #7A7669;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
 /*  News styles */
 .news {
-  background-color: #FCF3CF;
+  background-color: white;
 }
 
 .news p {
@@ -219,6 +298,20 @@ ul a {
 #quoted {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .news .container .leftcol {
+    display: none;
+  }
+  .leftside img {
+    height: 250px;
+    object-fit: cover;
+  }
+  .news .element:last-child {
+    background-color: white;
+  }
+
 }
 /*  Classes Styles  */
 .classes {
@@ -251,7 +344,7 @@ ul a {
 /*  Thesis Styles  */
 .thesis {
   display: block;
-  background-color: #FCF3CF;
+  background-color: white;
   padding: 32px 24px;
 }
 
@@ -283,7 +376,7 @@ footer {
   width: 100%;
   align-content: center;
   justify-content: space-between;
-  background-color: #FCF3CF;
+  background-color: white;
 }
 
 footer ul {
