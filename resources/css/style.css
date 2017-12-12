@@ -36,7 +36,8 @@ img {
 
 .container .leftcol {
   width: 60%;
-  object-fit: contain;
+  /*object-fit: contain;*/
+  object-fit: fill;
 }
 
 .container .rightcol {
@@ -116,7 +117,7 @@ img {
     font-size: 1.5rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .container {
     display: block;
@@ -226,7 +227,7 @@ ul a {
   line-height: 1.2;
 }
 
-.rightcol p {
+.banner .rightcol p {
   padding-top: 10%;
   font-size: 1.75rem;
   font-weight: 550;
@@ -290,6 +291,10 @@ button {
   background-color: #EAEDED;
 }
 
+.rightside .mobile {
+  display: none;
+}
+
 .rightside a {
   padding-top: 20px;
   color: blue;
@@ -311,7 +316,12 @@ button {
   .news .element:last-child {
     background-color: white;
   }
-
+  .rightside .desktop {
+    display: none;
+  }
+  .rightside .mobile {
+    display: inline;
+  }
 }
 /*  Classes Styles  */
 .classes {
@@ -338,7 +348,37 @@ button {
 
 .a_class p {
   padding: 8px 16px;
-  /*line-height: 2rem;*/
+}
+
+@media only screen and (max-width: 450px) {
+  .classes {
+    padding: 0 0 32px 0;
+    background-color: white;
+  }
+  .classbucket {
+    display: block;
+    margin:auto;
+  }
+  .classbucket .column {
+    display: block;
+    max-width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .column .a_class {
+    background-color: #EAEDED;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  .a_class img, .a_class p {
+    display: none;
+  }
+  .a_class h3 {
+    padding: 16px;
+    font-weight: 600;
+  }
 }
 
 /*  Thesis Styles  */
@@ -348,9 +388,13 @@ button {
   padding: 32px 24px;
 }
 
-.thesis h2 { /* controls the thesis title */
+.thesis .desktop { /* controls the thesis title */
   display: flex;
   justify-content: center;
+}
+
+.thesis .mobile {
+  display: none;
 }
 
 .thesis .element:first-child {
@@ -369,6 +413,29 @@ button {
   margin: 24px auto 8px 0;
 }
 
+@media only screen and (max-width: 450px) {
+  .thesis {
+    padding: 32px 24px 24px 24px;
+  }
+  .thesis .desktop {
+    display: none;
+  }
+  .thesis .mobile {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
+  }
+  .thesis .leftcol video {
+    height: 380px;
+    object-fit: fill;
+  }
+  .leftcol h3, .leftcol p {
+    display: none;
+  }
+  .thesis .container .rightcol {
+    display: none;
+  }
+}
 /*  Footer Styles  */
 footer {
   display: flex;
@@ -382,4 +449,14 @@ footer {
 footer ul {
   display: flex;
   justify-content: flex-end;
+}
+
+@media only screen and (max-width: 450px) {
+  footer {
+    padding: 16px;
+    font-size: 0.75rem;
+  }
+  footer ul {
+    display: none;
+  }
 }
